@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>边框</title>
+		<style>
+			#test1,#test2{
+                display: flex;
+			}
+            #test1>div {
+                width: 90px;
+                height: 90px;
+                margin: 20px;
+                background-color: aquamarine;
+                border-color:  rgb(165, 165, 179);
+                border-width: 5px;
+            }
+            #test2>div {
+                width: 90px;
+                height: 180px;
+                margin: 20px;
+                background-color: aquamarine;
+            }
+        </style>
+	</head>
+	<body>
+		<div id="test1">
+            <div style="border-style: none"></div>
+            <div style="border-style: hidden"></div>
+            <div style="border-style: dotted"></div>
+            <div style="border-style: dashed"></div>
+            <div style="border-style: solid"></div>
+            <div style="border-style: double"></div>
+            <div style="border-style: groove"></div>
+            <div style="border-style: ridge"></div>
+            <div style="border-style: inset"></div>
+            <div style="border-style: outset"></div>
+		</div>
+		<div id="test2">
+            <div style="border-radius: 30px"></div>
+            <div style="border-radius: 25% 10%"></div>
+            <div style="border-radius: 27px/54px"></div>
+            <div style="border-radius: 30%/30%"></div>
+            <div style="border-radius: 30% 40%/50%"></div>
+            <div style="border-radius: 40px 30px 60px / 20px 40px"></div>
+		</div>
+	</body>
+</html>

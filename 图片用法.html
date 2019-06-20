@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片用法</title>
+		<style>
+			.test1 {
+                display: flex
+            }
+            .test1>div {
+                width: 100px;
+                height: 150px;
+                background-color: aqua;
+                /* background-image: url("img.png"); */
+                margin: 20px;
+                border: 30px solid black;
+                background-clip: padding-box;
+                border-image-source: url("img.png");
+                border-image-slice: 40;
+                border-image-repeat: stretch;
+                border-image-width: 10px;
+                border-image-outset:10px;
+            }
+            .test2>div {
+                width: 800px;
+                height: 150px;
+                margin: 20px;
+                padding: 20px;
+                border: 30px dotted rgb(235, 217, 217);
+                font-size: 50px;
+                background-image: url("img.png");
+            }
+        </style>
+	</head>
+	<body>
+		<div class="test1">
+            <div style="border-image-repeat: stretch;">1</div>
+            <div style="border-image-repeat: repeat;">2</div>
+            <div style="border-image-repeat: round;">3</div>
+            <div style="border-image-repeat: space;">4</div>
+        </div>
+		<div class="test2">
+            <div style="-webkit-background-clip: text;background-clip: text;color: transparent;">123:测试ceshi</div>
+            <div style="-webkit-background-clip: border-box;background-clip: border-box">123:测试ceshi</div>
+            <div style="-webkit-background-clip: padding-box;background-clip: padding-box">123:测试ceshi</div>
+            <div style="-webkit-background-clip: content-box;background-clip: content-box">123:测试ceshi</div>
+        </div>
+        <ul style="list-style-image:url('img.png')">
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+	</body>
+</html>

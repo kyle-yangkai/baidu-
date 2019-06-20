@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动</title>
+		<style>
+			/* css代码 */
+			body{
+				margin: 10px;
+				font-size: 50px;
+				clear: both;
+			}
+			.test1,.test2,.test3{
+				margin: 20px;
+				border: 1px solid #000;
+			}
+			.test1 {
+				height: 100px;
+				background: yellowgreen;
+			}
+			.test2{
+				height: 200px;
+				float: left;
+				background: skyblue;
+			}
+			.test3 {
+				height: 150px;
+				background: silver;
+			}
+			/* .box:after {
+				content: "";
+				display: block;
+				clear: both;
+			} */
+        </style>
+	</head>
+	<!-- html代码 -->
+	<body>
+		<div class="box">
+			<div class="test2">
+				第二个测试块
+			</div>
+			<div class="test2">
+				第二个测试块
+			</div>
+		</div>
+		<div class="test3">
+			第三个测试块
+		</div>
+		<div class="test1">
+			第一个测试块
+		</div>
+	</body>
+</html>

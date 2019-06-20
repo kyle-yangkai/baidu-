@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>圆角边框渐变</title>
+		<style>
+			.box1,.box2,.box3 {
+				display: flex;
+				/* width: 900px; */
+				flex-wrap: wrap;
+				font-size:30px;
+			}
+			.box1>div,.box2>div,.box3>div {
+				flex-wrap: 0;
+				flex-shrink: 0;
+			}
+			.test1,.test2,.test3{
+				width: 900px;
+				height: 300px;
+				margin: 10px;
+				padding: 30px;
+				border-radius: 50px;
+				border:50px solid transparent;
+			}
+			.box1 .test1 {
+				position: relative;	
+				width: 900px;
+				height: 300px;
+				margin: 10px;
+				padding: 30px;
+				border-radius: 50px;
+				border:50px solid transparent;
+				background-origin:border-box;
+				background-clip: padding-box, border-box;
+				background-size: cover;
+				background-image:linear-gradient(#fff, #fff),linear-gradient(yellow, green);
+			}
+
+			.box1 .test2 {
+				position: relative;
+				width: 900px;
+				height: 300px;
+				border: 50px solid transparent;
+				border-radius: 50px;
+				background: #fff;
+				background-clip: padding-box;
+			}
+			.box1 .test2::after {
+				position: absolute;
+				top: -50px; 
+				bottom: -50px;
+				left: -50px; 
+				right: -50px;
+				background: linear-gradient(yellow, green);
+				content: '';
+				z-index: -1;
+				border-radius: 50px;
+			}
+			.box1 .test3 {
+				width: 960px;
+				height: 360px;
+				margin: 10px;
+				padding: 0px;
+				border-radius: 50px; /*设置圆角*/
+				border:50px solid transparent;   /*设置边框颜色透明，确保背景渐变色显示*/
+				background-origin: border-box;  /*从边框开始背景图*/
+				background-image: linear-gradient(yellow, green);
+			}
+			.box1 .test3>div {
+				background: #fff;
+				width: calc(100% - 60px);
+				height: calc(100% - 60px);
+				padding: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <p>线性渐变</p> -->
+		<div class="box1">
+			<div class="test1">
+				使用背景重叠
+			</div>
+			<div class="test2">
+				使用伪元素
+			</div>
+			<div class="test3">
+				<div>使用遮罩</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

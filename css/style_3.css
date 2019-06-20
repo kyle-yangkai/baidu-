@@ -1,0 +1,41 @@
+
+h1{
+    background: gray;
+    color: #fff;
+    padding: 30px;
+    margin: 0;
+}
+h2 {
+    width: 10%;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    padding: 0;
+    margin: 0;
+    float: left;
+    background: darkgray;
+    border-bottom: 1px solid #fff;
+    box-sizing: border-box;
+}
+.inf1,.inf2 {
+    width: 90%;
+    height: 100px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    border-bottom: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+    float: left;
+}
+.inf1>p{
+    display: inline-block;
+    padding-right: 60px;
+}
+.inf2>strong,.inf2>p {
+    display: inline-block;
+    width: 5%;
+    padding: 0;
+    float: left;
+}
+.inf2>p {
+    width: 95%;
+}

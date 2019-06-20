@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>渐变</title>
+		<style>
+			.box1,.box2,.box3 {
+				display: flex;
+				width: 900px;
+				flex-wrap: wrap;
+				font-size:30px;
+			}
+			.box1>div,.box2>div,.box3>div {
+				flex-wrap: 0;
+				flex-shrink: 0;
+			}
+			.test1,.test2,.test3{
+				width: 250px;
+				height: 130px;
+				margin: 10px;
+				border:10px solid #000;
+			}
+			.box1 .test1 {
+				/*方向缺省，百分比缺省，渐变从上到下，五种颜色按规则渐变*/
+				/* background-image: linear-gradient(red, yellow,blue,orange,black); */
+				/*从左到右，按照百分比渐变*/
+				/* background-image: linear-gradient(to right, red 10%, yellow 30%,blue 70%,orange  90%,black); */
+				/*从左上到右下，按照具体像素渐变*/
+				/* background-image: linear-gradient(to bottom right, red 10px, yellow 150px,blue 170px,orange  200px,black); */
+				background-image:linear-gradient(0deg, red, blue);
+			}
+
+			.box2 .test1 {
+				/* background: -webkit-radial-gradient(circle at 10px 50px,blue,green,yellow,black); */
+    			background-image: radial-gradient( blue 10px,green 20px,yellow ,black); 
+			}
+			.box2 .test2 {
+				border-radius: 15px 0 15px 0;
+				border-image: linear-gradient( blue ,green ,yellow ,black) 10; 
+			}
+			.box2 .test3 {
+				background-image:radial-gradient( blue 10px,green 20px,yellow ,black); 
+				background-clip: text;
+				-webkit-background-clip: text;  /*兼容chrome*/
+				color: transparent; 
+			}
+			.box3 .test1 {
+				border:10px dashed  #000;
+				border-image: linear-gradient( blue ,green ,yellow ,black) 10;
+			}
+
+
+			
+
+.headshot {
+	flex-shrink: 0;
+    margin: 20px;
+    height: 150px ;
+    width: 150px ;	
+    border: 8px solid transparent;    
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+	background-size: cover;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.headshot-1 {
+	border-radius: 30%;
+    background-image: url(http://www.jq22.com/tp/dd98045b-f687-4408-90b3-0f9b40fa8e96.jpg),
+                      linear-gradient(to top, #0fd850, #f9f047);
+}
+
+.headshot-2 {
+	border-radius: 50%;
+    background-image: url(http://www.jq22.com/tp/dd98045b-f687-4408-90b3-0f9b40fa8e96.jpg), 
+                      linear-gradient(to bottom right, #FF3CAC, #562B7C, #2B86C5);
+}
+
+.headshot-3 {
+	border-radius: 50% 10%;
+    background-image: url(http://www.jq22.com/tp/dd98045b-f687-4408-90b3-0f9b40fa8e96.jpg), 
+                      linear-gradient(to bottom left, #f83600, #f9d423);
+}
+		</style>
+	</head>
+	<body>
+		<p>线性渐变</p>
+		<div class="box1">
+			<div class="test1">
+				背景渐变
+			</div>
+			<div class="test2">
+				边框渐变
+			</div>
+			<div class="test3">
+				字体渐变
+			</div>
+		</div>
+		<p>径向渐变</p>
+		<div class="box2">
+			<div class="test1">
+				背景渐变
+			</div>
+			<div class="test2">
+				边框渐变
+			</div>
+			<div class="test3">
+				字体渐变
+			</div>
+		</div>
+		<p>虚线边框渐变</p>
+		<div class="box3">
+			<div class="test1">
+				1
+			</div>
+			<div class="test2">
+				2
+			</div>
+			<div class="test3">
+				3
+			</div>
+		</div>
+
+
+		<div class="headshot headshot-1"></div>
+		<div class="headshot headshot-2"></div>
+		<div class="headshot headshot-3"></div>
+	</body>
+</html>

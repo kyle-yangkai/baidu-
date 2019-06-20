@@ -1,0 +1,23 @@
+h1 {
+    height: 650px;
+    width: 20%;
+    padding-top:60px;
+    float: left;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+    background: skyblue;
+    margin: 0;
+}
+.inf {
+    float: left;
+    height: 650px;
+    margin-left: 30px;
+}
+.inf1>p{
+    display: inline-block;
+    padding-right: 60px;
+}
+.inf2>p {
+    margin-bottom: 10px;
+}

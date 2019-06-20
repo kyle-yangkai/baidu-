@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定位</title>
+		<style>
+			/* css代码 */
+			html,body {
+				padding: 0;
+				margin: 0;
+			}
+			/* html,body {
+				padding: 50px ;
+				margin: 50px ;
+				border: 50px solid transparent;
+				background-clip: content-box,padding-box,border-box;
+				background-origin: content-box,padding-box,border-box;
+				background-image: 	linear-gradient(#fff,#fff),
+									linear-gradient(skyblue,skyblue),
+									linear-gradient(yellowgreen,yellowgreen);
+			} */
+			
+			.test1,.test2 {
+				height: 50px;
+				position: absolute;
+				background: red;
+				font-size: 50px;
+			}
+			.test2 {
+				position: relative;
+				background: green;
+				/* z-index: 1; */
+			}
+			.test3 {
+				height: 50px;
+				position: fixed;
+				background: yellow;
+				font-size: 50px;
+			}
+			.test4 {
+				height: 50px;
+				position: static;
+				background: blue;
+				font-size: 50px;
+			}
+			.box,.box1 {
+				box-sizing: content-box;
+				padding: 50px ;
+				margin: 50px ;
+				border: 50px solid transparent;
+				position: relative;
+				background-clip: content-box,padding-box,border-box;
+				background-origin: content-box,padding-box,border-box;
+				background-image: 	linear-gradient(#fff,#fff),    /*定义内容颜色*/
+									linear-gradient(skyblue,skyblue),  /*定义padding颜色*/
+									linear-gradient(yellowgreen,yellowgreen);  /*定义border颜色*/
+			}
+			/* .box1 {
+				position: relative;
+			} */
+        </style>
+	</head>
+	<!-- html代码 -->
+	<body>
+		<div class="box">
+			<div class="test1">
+				absolute元素
+			</div>
+			<div class="test2">
+				relative元素
+			</div>
+			<div class="test3">
+				fixed元素
+			</div>
+			<div class="test4">
+				static元素
+			</div>
+		</div>
+	</body>
+</html>

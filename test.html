@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <title>test</title>
+	</head>
+	<body>
+        <script>
+            function yy(){
+                console.log(a);
+                console.log(b);
+                var a =1;
+                let b =2;
+            }
+            function ss() {
+                setTimeout(() => {
+                    console.log("a");
+                }, 0);
+                console.log("b");
+                var promise = new Promise(function(resolve, reject) {  
+                    resolve('ok');  throw new Error('test'); 
+                }); 
+                promise.then(function() { console.log("123") })
+                .then(function() { console.log("999") });
+            }
+            yy();
+            ss();
+        </script>
+	</body>
+</html>

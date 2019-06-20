@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>层叠</title>
+		<style>
+			/* css代码 */
+			
+			.test1,.test2 {
+				height: 50px;
+				position: absolute;
+				background: red;
+				font-size: 50px;
+				z-index: 2;
+			}
+			.test2 {
+				position: relative;
+				background: green;
+				z-index: 1;
+			}
+			.box1 .test1, .box1 .test2 {
+				z-index: 10;
+			}
+			.test3 {
+				height: 50px;
+				position: fixed;
+				background: yellow;
+				font-size: 50px;
+			}
+			.test4 {
+				height: 50px;
+				position: static;
+				background: blue;
+				font-size: 50px;
+			}
+			.box {
+				border: 50px solid skyblue;
+				position: absolute;
+				z-index: 2;
+			}
+			.box1 {
+				border: 50px solid skyblue;
+				position: absolute;
+				top: 0;
+				z-index: 1;
+			}
+        </style>
+	</head>
+	<!-- html代码 -->
+	<body>
+		<div class="box">
+			<div class="test1">
+				absolute元素
+			</div>
+			<div class="test2">
+				relative元素
+			</div>
+		</div>
+		<div class="box1">
+			<div class="test1">
+				box1中的absolute元素 
+			</div>
+			<div class="test2">
+				box1中的relative元素
+			</div>
+		</div>
+	</body>
+</html>
