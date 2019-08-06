@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>布局</title>
+		<style>
+			.box {
+                height: 300px;
+                border: 2px solid #000;
+                position: relative;
+                margin-bottom:10px;
+                font-size: 30px; 
+            }
+            .test1 {
+                height: 100%;
+                width: 30%;
+                background: skyblue;
+                float: left;
+            }
+            .test2 {
+                height: 100%;
+                width: 70%;
+                float: left;
+                background: yellowgreen;
+            }
+            .test3 {
+                height: 100%;
+                width: 30%;
+                background: skyblue;
+                position: absolute;
+                left: 0;
+            }
+            .test4 {
+                height: 100%;
+                width: 70%;
+                background: yellowgreen;
+                position: absolute;
+                right: 0;
+            }
+            .box-flex {
+                display: flex;
+            }
+            .test5 {
+                height: 100%;
+                width: 30%;
+                background: skyblue;
+            }
+            .test6 {
+                height: 100%;
+                width: 70%;
+                background: yellowgreen;
+            }
+            .test7 {
+                height: 100%;
+                width: 200px;
+                background: skyblue;
+                float: left;
+            }
+            .test8 {
+                height: 100%;
+                width: calc(100% - 200px);
+                background: yellowgreen;
+                float: left;
+            }
+            .test9 {
+                height: 100%;
+                width: 200px;
+                background: skyblue;
+                position: absolute;
+                left: 0;
+            }
+            .test10 {
+                height: 100%;
+                width: calc(100% - 200px);
+                background: yellowgreen;
+                position: absolute;
+                right: 0;
+            }
+            .test11 {
+                height: 100%;
+                width: 200px;
+                background: skyblue;
+            }
+            .test12 {
+                height: 100%;
+                width: calc(100% - 200px);
+                background: yellowgreen;
+            }
+            .test14 {
+                height: 100%;
+                width: 200px;
+                background: skyblue;
+                position: absolute;
+                right: 0;
+            }
+            .test13 {
+                height: 100%;
+                width: calc(100% - 200px);
+                background: yellowgreen;
+                position: absolute;
+                left: 0;
+            }
+            .test15, .test17 {
+                height: 100%;
+                width: 200px;
+                background: skyblue;
+                float: left;
+            }
+            .test16 {
+                height: 100%;
+                width: calc(100% - 400px);
+                background: yellowgreen;
+                float: left;
+            }
+            .test18 {
+                height: 100%;
+                width: 200px;
+                background: skyblue;
+                position: absolute;
+                left: 0;
+            }
+            .test19 {
+                height: 100%;
+                width: calc(100% - 400px);
+                background: yellowgreen;
+                position: absolute;
+                left:200px;
+            }
+            .test20 {
+                height: 100%;
+                width: 200px;
+                background: skyblue;
+                position: absolute;
+                right:0;
+            }
+            .test21,.test23 {
+                height: 100%;
+                width: 200px;
+                background: skyblue;
+            }
+            .test22 {
+                height: 100%;
+                width: calc(100% - 400px);
+                background: yellowgreen;
+            }
+            .test25 {
+                height: 100%;
+                width: 200px;
+                background: skyblue;
+                position: absolute;
+                left:200px;
+            }
+            .test26 {
+                height: 100%;
+                width: calc(100% - 400px);
+                background: yellowgreen;
+                position: absolute;
+                right:0;
+            }
+        </style>
+	</head>
+	<body>
+		<div class="box">
+            <div class="test1">两栏布局 float 左边30%</div>
+            <div class="test2">两栏布局 float 右边70%</div>
+        </div>
+		<div class="box">
+            <div class="test3">两栏布局 position 左边30%</div>
+            <div class="test4">两栏布局 position 右边70%</div>
+        </div>
+		<div class="box box-flex">
+            <div class="test5">两栏布局 flex 左边30%</div>
+            <div class="test6">两栏布局 flex 右边70%</div>
+        </div>
+
+		<div class="box">
+            <div class="test7">两栏布局 float 左宽度固定为200px</div>
+            <div class="test8">两栏布局 float 右宽度自适应</div>
+        </div>
+		<div class="box">
+            <div class="test9">两栏布局 position 左宽度固定为200px</div>
+            <div class="test10">两栏布局 position 右宽度自适应</div>
+        </div>
+        <div class="box box-flex">
+            <div class="test11">两栏布局 flex 左宽度固定为200px</div>
+            <div class="test12">两栏布局 flex 右宽度自适应</div>
+        </div>
+
+		<div class="box">
+            <div class="test8">两栏布局 float 左宽度自适应</div>
+            <div class="test7">两栏布局 float 右宽度固定为200px</div>
+        </div>
+		<div class="box">
+            <div class="test13">两栏布局 position 左宽度自适应</div>
+            <div class="test14">两栏布局 position 右宽度固定为200px</div>
+        </div>
+        <div class="box box-flex">
+            <div class="test12">两栏布局 float 左宽度自适应</div>
+            <div class="test11">两栏布局 float 右宽度固定为200px</div>
+        </div>
+
+        <div class="box">
+            <div class="test15">三栏布局 float 左宽度固定为200px</div>
+            <div class="test16">三栏布局 float 中间宽度自适应</div>
+            <div class="test17">三栏布局 float 右宽度固定为200px</div>  
+        </div>
+        <div class="box">
+            <div class="test18">三栏布局 position 左宽度固定为200px</div>
+            <div class="test19">三栏布局 position 中间宽度自适应</div>
+            <div class="test20">三栏布局 position 右宽度固定为200px</div>
+        </div>
+        <div class="box box-flex">
+            <div class="test21">三栏布局 flex 左宽度固定为200px</div>
+            <div class="test22">三栏布局 flex 中间宽度自适应</div>
+            <div class="test23">三栏布局 flex 右宽度固定为200px</div>
+        </div>
+
+        <div class="box">
+            <div class="test15">三栏布局 float 左宽度固定为200px</div>
+            <div class="test17">三栏布局 float 中间宽度固定为200px</div>
+            <div class="test16">三栏布局 float 右宽度自适应</div>  
+        </div>
+        <div class="box">
+            <div class="test18">三栏布局 position 左宽度固定为200px</div>
+            <div class="test25">三栏布局 position 中间宽度固定为200px</div>
+            <div class="test26">三栏布局 position 右宽度自适应</div>
+        </div>
+        <div class="box box-flex">
+            <div class="test21">三栏布局 flex 左宽度固定为200px</div>
+            <div class="test23">三栏布局 flex 中间宽度固定为200px</div>
+            <div class="test22">三栏布局 flex 右宽度自适应</div>
+        </div>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>grid</title>
+		<style>
+			/*css代码*/
+			.box {
+				height: 90vh;
+				border: 2px solid #000;
+				display: grid;
+				overflow: hidden;
+				padding: 20px;
+				background-clip: content-box;
+				background: blanchedalmond;
+				grid-template-rows: 100px 400px 100px;
+				grid-template-columns: 100px 100px;
+				justify-items: start;
+				align-items: start;
+				/* justify-content: start;
+				align-content: start; */
+				/* grid-template-areas: 'header header' 'nav  main' 'nav  foot'; */
+			}
+			.test1 {
+				background: red;
+				/* grid-area: header; */
+			}
+			.test3 {
+				background: skyblue;
+				/* height: 100px; */
+				/* width: 100px */
+				/* grid-area: nav; */
+			}
+			.test4 {
+				background: orange;
+				/* grid-area: main; */
+			}
+			.test5 {
+				background: yellowgreen;
+				/* grid-area: foot; */
+			}
+
+        </style>
+	</head>
+	<!-- html代码 -->
+	<body>
+		<div class="box">
+			<div class="test1">测试盒子0</div>
+			<div class="test3">测试盒子2</div>
+			<div class="test5">测试盒子3</div>
+			<div class="test4">测试盒子4</div>
+			<div class="test1">测试盒子5</div>
+			<div class="test3">测试盒子6</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>猜数字游戏</title>
+</head>
+<body>
+<h1>猜数字游戏</h1>
+<p>我刚才随机选定了一个100以内的自然数。看你能否在 10 次以内猜中它。每次我都会告诉你所猜的结果是高了还是低了。</p>
+<div>
+    <label for="y">猜猜数：</label>
+    <input type="text" id="y" >
+    <input type="button" id="btn" value="确定" >
+</div>
+<!-- 三行提示 -->
+<div>
+    <p id="first"></p>
+    <p id="second"></p>
+    <p id="third"></p>
+</div>
+<script>
+// 声明变量
+const X = Math.floor(Math.random()*100)+1;      //选定100以内自然数
+var Y,                                          //声明Y用于获取输入的数值
+    firstText,                                  //声明firstText用于存储第一行的内容
+    input = document.getElementById("y"),       //获取输入框dom
+    btn   = document.getElementById("btn"),     //获取确定按钮dom
+    count = 0,                                  //初始化计数为0
+    first = document.getElementById("first"),   //获取第一行dom
+    second = document.getElementById("second"), //获取第二行dom
+    third = document.getElementById("third");   //获取第三行dom
+
+// 状态变化函数封装
+var stateChange = function(secondMsg, secondBg,thirdMsg){
+    /**
+    * 参数说明：
+    * secondMsg —— 第二行文字； 
+    * secondBg —— 第二行背景色； 
+    * thirdMsg —— 第三行文字； 
+    */
+    // 第二行状态变化
+    second.innerHTML = secondMsg;
+    second.style.background = secondBg;
+
+    // 第三行状态变化
+    third.innerHTML = thirdMsg;
+    if(thirdMsg==="开始新游戏"){
+        third.style.display = "inline-block";
+        third.style.border = "1px solid gray";
+        third.onclick = function(){
+            location.reload();
+        }
+        //输入框和确定按钮状态变化
+        input.setAttribute("disabled","disabled");
+        btn.setAttribute("disabled","disabled");
+    }
+    input.value = ""; //清除输入框内容
+}
+
+btn.onclick = function () { //点击确定按钮执行的操作
+    Y = Number (input.value);       //获取输入框内容并转换成number
+    if(Y>=1&&Y<=100){   //判断输入值Y的合规性
+        count++;    //猜测次数加1
+        if (count===1){
+            firstText =  "上次猜的数为：";
+        }
+        firstText = firstText + Y + " ";
+        first.innerHTML = firstText;
+        if(Y===X) {     //猜对数字操作
+            stateChange("恭喜你！猜对了！","green","开始新游戏");
+        }else {
+            if(Y>X) { //猜高了的操作
+                stateChange("你猜错了！","red","刚才你猜高了！");
+            }else { //猜低了的操作
+                stateChange("你猜错了！","red","刚才你猜低了！");
+            }
+            if(count>=10){ //猜的次数到达10次
+                stateChange("!!!GAME OVER!!!","red","开始新游戏");
+            }
+        }
+    } else {    //输入数值不合规时提醒用户输入合规的数
+        alert("您的输入有误，请输入1-100之间的自然数");
+        input.value = "";   //清除输入框内容
+    }
+}
+
+// console.log(b);
+// console.log(c);
+var a;
+
+console.log(a);
+let b = 2;
+const c = 3;
+var tt = /e/g;
+var obj = tt.exec("The best things in life are free!");
+console.log(obj);
+</script>
+</body>
+</html>

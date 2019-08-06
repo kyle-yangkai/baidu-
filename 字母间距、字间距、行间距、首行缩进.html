@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字母间距、字间距、行间距、首行缩进</title>
+		<style>
+			body,html,p,div {
+				font-size: 20px;
+				font-family:'Times New Roman';
+				margin: 0;
+				padding: 0;
+			}
+        </style>
+	</head>
+	<body>
+<!-- 字母间距 -->
+<p style="letter-spacing: 2px">english test</p>
+<p style="letter-spacing: 0.5px">english test</p>
+<p >english test</p>
+<p style="letter-spacing: -0.5px">english test</p>
+<p style="letter-spacing: -2px">english test</p>
+
+<p style="letter-spacing: 2px">中文测试</p>
+<p style="letter-spacing: 0.5px">中文测试</p>
+<p >中文测试</p>
+<p style="letter-spacing: -0.5px">中文测试</p>
+<p style="letter-spacing: -2px">中文测试</p>
+
+<!-- 字间距 -->
+<p style="word-spacing: 10px">english test</p>
+<p style="word-spacing: 5px">english test</p>
+<p >english test</p>
+<p style="word-spacing: -5px">english test</p>
+<p style="word-spacing: -10px">english test</p>
+
+<p style="word-spacing: 10px">中文测试</p>
+<p style="word-spacing: 5px">中文测试</p>
+<p >中文测试</p>
+<p style="word-spacing: -5px">中文测试</p>
+<p style="word-spacing: -10px">中文测试</p>
+
+<p style="word-spacing: 10px">中文 测试</p>
+<p style="word-spacing: 5px">中文 测试</p>
+<p >中文测试</p>
+<p style="word-spacing: -5px">中文 测试</p>
+<p style="word-spacing: -10px">中文 测试</p>
+
+<!-- 行间距 -->
+父元素设置了行间距
+<div style="line-height: 50px">
+	<p style="line-height: 0.5">english test</p>
+	<p style="line-height: 10px">english test</p>
+	<p >english test</p>
+	<p style="line-height: 50%">english test</p>
+	<p style="line-height: inherit">english test</p>
+</div>
+父元素未设置行间距
+<div>
+	<p style="line-height: 0.5">english test</p>
+	<p style="line-height: 10px">english test</p>
+	<p >english test</p>
+	<p style="line-height: 50%">english test</p>
+	<p style="line-height: inherit">english test</p>
+</div>
+
+<!-- 设置font-family:'Times New Roman'; -->
+<p style="font-size: 10px">english test</p>
+<p style="font-size: 20px">english test</p>
+<p style="font-size: 30px">english test</p>
+<p style="font-size: 40px">english test</p>
+<p style="font-size: 50px">english test</p>
+<p style="font-size: 60px">english test</p>
+<p style="font-size: 70px">english test</p>
+<p style="font-size: 80px">english test</p>
+<p style="font-size: 90px">english test</p>
+<p style="font-size: 100px">english test</p>
+
+<!-- 首行缩进 -->
+<div  style="text-indent: 50px">
+	<p style="text-indent: 50px">english test</p>
+	<p style="text-indent: 10%;width:500px">english test</p>
+	<p style="text-indent: 10%;">english test</p>
+	<p style="text-indent: inherit">english test</p>
+</div>
+	</body>
+</html>

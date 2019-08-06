@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>圣杯布局页面</title>
+        <style>
+            html,body,div,ul,li ,p{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            li {
+                list-style: none;
+                float: left;
+            }
+            .head {
+                height: 80px;
+                width: 100%;
+                background: #333;
+            }
+            .banner{
+                height: 300px;
+                width: 100%;
+                background: #66bb33;
+            }
+            .navBar {
+                height: 70px;
+                border: 1px solid #ddd;
+                box-sizing: border-box;
+            }
+            .head-content,.banner-content,.navBar-content,.content{
+                position: relative;
+                width: 960px;
+                height: 100%;
+                margin: 0 auto;
+            }
+            .head-logo {
+                position: absolute;
+                font-size: 25px;
+                height: 30px;
+                line-height: 30px;
+                top:15px;
+                color: #fff;
+            }
+            .head-nav {
+                position: absolute;
+                right: 0;
+            }
+            .head-nav a {
+                color: #fff;
+                margin-left: 16px;
+                font-size: 16px;
+            }
+            .banner-ul {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+            .banner-ul ul {
+                display: flex;
+                align-items:flex-end;
+            }
+            .banner-ul ul li {
+                height: 35px;
+                width: 30px;
+                display: inline-block;
+                font-size: 16px;
+                line-height: 30px;
+                text-align: center;
+                box-sizing: border-box;
+                border: 1px solid #335e1a;
+                background: #b2dd99;
+                margin:0 0 10px 5px;
+            }
+            .banner-ul ul li.active {
+                height: 50px;
+                padding-top: 15px;
+                border: 1px solid #14250a;
+                background: #e0f1d6;
+            }
+            .navBar-ul {
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+            }
+            .navBar-ul ul li {
+                height: 50px;
+                line-height: 50px;
+                padding: 0 30px;
+                font-size: 16px;
+                background: #eee;
+                border: 1px solid #ddd;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+            .navBar-ul ul li.active {
+                background: #fff;
+                border-bottom: 1px solid #fff;
+            }
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .content div {
+                border: 1px solid #ccc;
+                padding: 80px;
+                margin: 10px 10px 0 0;
+                font-size: 14px;
+            }
+            .ft {
+                height: 120px;
+                background: #666;
+                color: #fff;
+                font-size: 14px;
+                text-align: center;
+            }
+            .ft p {
+                padding-top:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <div class="head-content">
+                <div class="head-logo">Logo</div>
+                <div class="head-nav">
+                    <a href="">Github</a>
+                    <a href="">Register</a>
+                    <a href="">Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="banner-content">
+                <div class="banner-ul">
+                    <ul>
+                        <li>1</li>
+                        <li class="active">2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navBar">
+            <div class="navBar-content">
+                <div class="navBar-ul">
+                    <ul>
+                        <li class="active">HOME</li>
+                        <li>PROFILE</li>
+                        <li>ABOUT</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div>This is Content 1</div>
+            <div>Maybe Content 2</div>
+            <div> Content 3</div>
+            <div> Content 4</div>
+            <div> Content 5</div>
+            <div> Content 6</div>
+            <div> Content 7</div>
+            <div> Content 8</div>
+            <div> Content 9</div>
+            <div> Content 10</div>
+        </div>
+        <div class="ft">
+           <p> © 2018 ife.baidu.com </p>
+        </div>
+    </body>
+</html>

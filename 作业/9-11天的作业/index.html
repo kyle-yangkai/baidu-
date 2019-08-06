@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>9-11天作业</title>
+		<style>
+			body,html,div,h1,h2,h3,h4,h5,h6,p,input,textarea{
+                padding: 0;
+                margin: 0;
+                line-height: 1em;
+                font: 20px "Myriad Pro";
+                color: #141414;
+            }
+            .box {
+                width: 1600px;
+                background: #f2f2f2; 
+                margin: 0 auto;
+            }
+            .sec-1 {
+                height: 990px;
+                background: url('img/img (1).png') no-repeat;
+                text-align: center;
+            }
+            .sec-1 h1 {
+                font-size: 60px;
+                height: 60px;
+                padding-top: 200px;
+                font-weight: 400;
+                color: #fff;
+            }
+            .sec-1>p {
+                width: 750px;
+                margin: 70px auto 0;
+                line-height: 30px;
+                color: rgba(255,255,255,0.8);
+            }
+            .sec-1 .form-1 {
+                width: 968px;
+                margin: 100px auto 0;
+                border: 1px solid #625e4f; 
+                border-radius: 2px;
+            }
+            .form-1 h3 {
+                font-size: 16px;
+                padding-top: 50px;
+                height: 30px;
+                line-height: 30px;
+                color: #fff;
+                text-transform:uppercase;
+                letter-spacing: 4px;
+            }
+            .form-1 p {
+                font-size: 12px;
+                height: 30px;
+                line-height: 30px;
+                color: rgba(255,255,255,0.6);
+                text-transform:uppercase;
+                letter-spacing: 2px;
+            }
+            .form-1 div {
+                margin:30px auto 50PX;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+            }
+            .form-1 input[type="text"]{
+                width:288px;
+                height: 48px;
+                font-size: 14px;
+                line-height: 48px;
+                border:1px solid #57554f;
+                border-radius: 2px;
+                padding-left: 20px;
+                margin-right: 30px;
+                background: none;
+                color: #fff;
+            }
+            .form-1 input[type="submit"] {
+                width: 130px;
+                height: 50px;
+                border-radius: 2px;
+                background: #fff;
+                font-size: 14px;
+                line-height: 50px;
+                letter-spacing: 2px;
+            }
+            .sec-2 {
+                width: 1040px;
+                height: 710px;
+                margin: 0 auto;
+            }
+            .sec-2>p {
+                margin-top: 85px;
+                height: 20px;
+                line-height: 20px;
+                font-size: 14px;
+                text-transform:uppercase;
+                letter-spacing: 2px;
+                text-align: center;
+            }
+            .sec-2>h2 {
+                margin: 30px auto 0;
+                width: 740px;
+                font-size: 42px;
+                text-align: center;
+            }
+            .gridBox-1 {
+                margin-top: 80px;
+                display: grid;
+                grid-row-gap: 80px;
+                grid-template-areas: 'a b' 'c d';
+                justify-content:space-between; 
+            }
+            .gridBox-1-item {
+                width: 450px;
+                height: 90px;
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            .gridBox-1-item> img {
+                width: 50px;
+                height: 50px;
+                flex-shrink: 0;
+                padding-right: 25px;
+            }
+            .gridBox-1-item-item>h4 {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .gridBox-1-item-item>p {
+                margin-top: 10px;
+                font-size: 16px;
+                line-height: 24px;
+            }
+            .sec-3 {
+                height: 800px;
+                background: url('img/img (24).png') no-repeat;
+            }
+            .sec-3>div {
+                padding: 180px 0 0 315px;
+            }
+            .sec-3>div>h2 {
+                width: 380px;
+                font-size: 42px;
+                color: #fff;
+                font-weight: 400;
+            }
+            .sec-3>div>p {
+                margin-top: 90px;
+                width: 380px;
+                font-size: 18px;
+                color: rgba(255,255,255,0.5);
+                font-weight: 400;
+            }
+            .sec-3>div>div {
+                margin-top: 60px;
+                display: flex;
+            }
+            .sec-3 input[type="button"] {
+                box-sizing: border-box;
+                width: 240px;
+                height: 60px;
+                margin-right: 30px;
+                font-size: 12px;
+                line-height: 60px;
+                border-radius: 2px;
+                background: #fff;
+                border: none;
+                text-transform:uppercase;
+                letter-spacing: 2px;
+            }
+            .sec-3 input[type="button"]:last-child {
+                color: #fff;
+                border: 1px solid #686e65;
+                background: none;
+            }
+            .sec-4 {
+                height: 579Px;
+                border-bottom: 1px solid #e7e7e7;
+            }
+            .sec-4>h2 {
+                font-size: 42px;
+                padding-top: 100px;
+                text-align: center;
+            }
+            .gridBox-2 {
+                width: 970px;
+                margin: 90px auto 0;
+                display: grid;
+                grid-template-areas: 'a b c';
+                justify-content: space-between;
+            }
+            .gridBox-2-item{
+                width: 270px;
+                text-align: center;
+            }
+            .gridBox-2-item>p {
+                margin-top:40px;
+                font-size: 16px;
+            }
+            .sec-5,.sec-6 {
+                border-bottom: 1px solid #e7e7e7;
+            }
+            .flexBox-1 {
+                width: 970px;
+                margin: 0 auto;
+                padding: 100px 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .flexBox-1>img {
+                width: 570px;
+                height: 350px;
+                border-radius: 2px;
+                flex-shrink: 0;
+                flex-grow: 0;
+            }
+            .flexBox-1>img:first-child {
+                margin-bottom:80px; 
+            }
+            .flexBox-1-item {
+                width: 310px;
+            }
+            .flexBox-1-item>h3 {
+                margin-top: 70px;
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 30px;
+            }
+            .flexBox-1-item>p {
+                margin-top: 30px;
+                font-size: 16px;
+                line-height: 25px;
+            }
+            .sec-6>h2 {
+                font-size: 42px;
+                padding-top: 100px;
+                text-align: center;
+            }
+            .sec-6>p {
+                width: 710px;
+                margin: 25px auto 0;
+                font-size: 18px;
+                line-height: 25px;
+                text-align: center;
+            }
+            .gridBox-3 {
+                width: 970px;
+                margin: 60px auto 100px;
+                display: grid;
+                grid-template-areas: 'a b' 'c d';
+                grid-row-gap: 30px;
+                justify-content: space-between;
+            }
+            .gridBox-3-item {
+                width: 470px;
+                height: 340px;
+                position: relative;
+                border-radius: 2px;     
+            }
+            .gridBox-3-item:hover .hoverShow{
+                display: block;
+                cursor: pointer;
+            }
+            .hoverShow {
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba(20,20,20,0.5);
+            }
+            .hoverShow>h3 {
+                margin-top: 110px;
+                text-align: center;
+                color: #fff;
+                font-size: 20px;
+                line-height: 20px;
+            }
+            .hoverShow>p {
+                margin-top: 20px;
+                font-size: 12px;
+                color: rgba(255,255,255,0.5);
+                text-align: center;
+            }
+            .hoverShow>div {
+                width: 216px;
+                margin: 40px auto 0;
+                display: flex;
+                justify-content: space-between;
+            }
+            .sec-7 {
+                width: 970px;
+                margin: 70px auto ;
+                display: flex;
+                justify-content: space-between;
+            }
+            .sec-7-1{
+                width: 470px;
+                height: 560px;
+                box-sizing: border-box;
+                border: 1px solid #e7e7e7;
+                border-radius: 8px;
+            }
+            .form-2 {
+                width: 370px;
+                margin: 50px auto 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .form-2>p {
+                margin-bottom: 45px;
+                letter-spacing: 4px;
+                text-transform:uppercase;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .form-2>input {
+                width: 100%;
+                border: 1px solid #e7e7e7;
+                height: 48px;
+                line-height: 50px;
+                border-radius: 2px;
+                margin-bottom: 30px;
+                padding-left: 18px;
+                background: none;
+            }
+            .form-2>textarea {
+                height: 145px;
+                width: 100%;
+                border-radius: 2px;
+                margin-bottom: 30px;
+                border: 1px solid #e7e7e7;
+                padding-left: 18px;
+                padding-top: 18px;
+                background: none;
+            }
+            .form-2>input[type="submit"] {
+                padding-left: 0;
+                width: 390px;
+                color: rgba(255,255,255,0.8);
+                background: #141414;
+                letter-spacing: 2px;
+            }
+            .sec-7-2 {
+                width: 360px;
+            }
+            .sec-7-2>h1 {
+                margin-top: 90px;
+                font-size: 42px;
+                font-weight: bold;
+            }
+            .sec-7-2>h6 {
+                margin-top: 30px;
+                margin-bottom: 70px;
+                font-size: 16px;
+                line-height: 25px;
+            }
+            .sec-7-2>p {
+                font-size: 16px;;
+                line-height: 26px;
+                padding-left: 40px;
+                margin-bottom: 30px;
+                background: url("img/img (16).png") 0 0 no-repeat;
+            }
+            .sec-7-2>.adress {
+                background: url("img/img (15).png") 0 0 no-repeat;
+            }
+            .sec-7-2>.email {
+                background: url("img/img (17).png") 0 0 no-repeat;
+            }
+            .sec-8 {
+                background: #141414;
+            }
+            .flexBox-2 {
+                width: 1170px;
+                margin: 0 auto ;
+                padding: 80px 0 90px;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+            .flexBox-2-item {
+                width: 270px;
+                display: flex;
+                flex-direction: column;
+            }
+            .flexBox-2-item>a, .flexBox-2-item>p {
+                margin-bottom: 30px;
+                text-decoration: none;
+                font-size: 16px;
+                color: rgba(255,255,255,0.4);
+            }
+            .flexBox-2-item>a:first-child,.flexBox-2-item>p:first-child {
+                color: #fff;
+                text-transform:uppercase;
+                letter-spacing: 2px;
+            }
+            .flexBox-2-item>p:last-child {
+                line-height: 25px;
+            }
+            .flexBox-2-item>div {
+                display: flex;
+            }
+            .flexBox-2-item>div>img{
+                width: 24px;
+                height: 24px;
+                margin-right: 16px;
+            }
+        </style>
+	</head>
+	<!-- html代码 -->
+	<body>
+		<div class="box">
+            <section class="sec-1">
+                <h1>Hello World</h1>
+                <p>China is speeding up strategic plan, standards, traffic rules, laws and regulations on accident-incurred liabilities for its smart car industry, Economic Information Daily reported Thursday.</p>
+                <form action="" method="post" class="form-1">
+                    <h3>CREATE YOUR ACCOUNT</h3>
+                    <p>It is absolutely free</p>
+                    <div>
+                        <input type="text" placeholder="Create your email" value="denis@getcraftwork.com">
+                        <input type="text" placeholder="Create your password">
+                        <input type="submit" value="SIGN UP">
+                    </div>
+                </form>
+            </section>
+            <section class="sec-2">
+                <p>Boatloads of Awesome</p>
+                <h2>Ready-made, customizable, HTML landing page sections</h2>
+                <div class="gridBox-1">
+                    <div class="gridBox-1-item">
+                        <img src="img/img (2).png">
+                        <div class="gridBox-1-item-item">
+                            <h4>Mobile First</h4>
+                            <p>All modulz are built mobile-first for maximum device compatibility.</p>
+                        </div>
+                    </div>
+                    <div class="gridBox-1-item">
+                        <img src="img/img (3).png">
+                        <div class="gridBox-1-item-item">
+                            <h4>Accessibility</h4>
+                            <p>Support for IE8, mobile and tablet devices, screenreaders and color blind.</p>
+                        </div>
+                    </div>
+                    <div class="gridBox-1-item">
+                        <img src="img/img (4).png">
+                        <div class="gridBox-1-item-item">
+                            <h4>Fluid Typography</h4>
+                            <p>On different screen sizes, fonts automagically scale with the viewport.</p>
+                        </div>
+                    </div>
+                    <div class="gridBox-1-item">
+                        <img src="img/img (5).png">
+                        <div class="gridBox-1-item-item">
+                            <h4>Customization</h4>
+                            <p>Make any design your own using the Style Editor. Personalize fonts, colors, and layouts to create the custom look you want.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sec-3">
+                <div>
+                    <h2>Supportive policies for China's smart car</h2>
+                    <p>China will come up with its own smart car standards, traffic rules, laws and regulations relating to safety, according to the China Industry Innovation Alliance for the Intelligent and Connected Vehicles.</p>
+                    <div>
+                        <input type="button" value="Check out Features">
+                        <input type="button" value="Try product for Free">
+                    </div>
+                </div>
+            </section>
+            <section class="sec-4">
+                <h2>Try Our Awesome Products</h2>
+                <div class="gridBox-2">
+                    <div class="gridBox-2-item">
+                        <img src="img/img (6).png">
+                        <p>Li Jun, a China Academy of Engineering academician and also director of the alliance's experts' committee, said that China will also launch design guidance for smart cars, smart map architecture and standards for test grounds.</p>
+                    </div>
+                    <div class="gridBox-2-item">
+                        <img src="img/img (7).png">
+                        <p>Li said the smart car industry is able to enlarge the current car industry by 1 trillion yuan ($158.15 billion) and also able to boost fast development in 5G, internet of cars, big data, artificial intelligence and new-energy vehicles.</p>
+                    </div>
+                    <div class="gridBox-2-item">
+                        <img src="img/img (8).png">
+                        <p>Zhang Junyi, a partner with NIO Capital, said that the smart car is the trend for the car industry and China's auto sector will usher in a new key development stage with the improvement of infrastructure, technology, policies and laws.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="sec-5">
+                <div class="flexBox-1">
+                    <img src="img/img (9).png">
+                    <div class="flexBox-1-item">
+                        <h3>Learn How to Improve Your Personal Business</h3>
+                        <p>Li Jun, a China Academy of Engineering academician and also director of the alliance's experts' committee, said that China will also launch design guidance for smart cars, smart map architecture and standards for test grounds.</p>
+                    </div>
+                    <div class="flexBox-1-item">
+                        <h3>Choose Between Two Beautifully Designed Color Schemes.</h3>
+                        <p>China will come up with its own smart car standards, traffic rules, laws and regulations relating to safety, according to the China Industry Innovation Alliance for the Intelligent and Connected Vehicles.</p>
+                    </div>
+                    <img src="img/img (10).png">
+                </div>
+            </section>
+            <section class="sec-6">
+                <h2>Our Awesome Crew</h2>
+                <p>Our unique online teaching style makes learning easy for everyone. Whether you are trying to land a new job, brush up on your skills.</p>
+                <div class="gridBox-3">
+                    <div class="gridBox-3-item">
+                        <img src="img/img (11).png">
+                        <div class="hoverShow">
+                            <h3>Ethan Dutton</h3>
+                            <p>Senior Visual Designer</p>
+                            <div>
+                                <img src="img/img (25).png">
+                                <img src="img/img (26).png">
+                                <img src="img/img (27).png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gridBox-3-item">
+                        <img src="img/img (12).png">
+                        <div class="hoverShow">
+                            <h3>Ethan Dutton</h3>
+                            <p>Senior Visual Designer</p>
+                            <div>
+                                <img src="img/img (25).png">
+                                <img src="img/img (26).png">
+                                <img src="img/img (27).png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gridBox-3-item">
+                        <img src="img/img (14).png">
+                        <div class="hoverShow">
+                            <h3>Ethan Dutton</h3>
+                            <p>Senior Visual Designer</p>
+                            <div>
+                                <img src="img/img (25).png">
+                                <img src="img/img (26).png">
+                                <img src="img/img (27).png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gridBox-3-item">
+                        <img src="img/img (13).png">
+                        <div class="hoverShow">
+                            <h3>Ethan Dutton</h3>
+                            <p>Senior Visual Designer</p>
+                            <div>
+                                <img src="img/img (25).png">
+                                <img src="img/img (26).png">
+                                <img src="img/img (27).png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sec-7">
+                <div class="sec-7-1">
+                    <form action="" class="form-2">
+                        <p>Fell free to Write Us</p>
+                        <input type="text" placeholder="E-mail">
+                        <input type="text" placeholder="Subject">
+                        <textarea placeholder="Message"></textarea>
+                        <input type="submit" value="SEND">
+                    </form>
+                </div>
+                <div class="sec-7-2">
+                    <h1>Contacts</h1>
+                    <h6>Make any design your own using the Style Editor. Personalize fonts, colors, and layouts to create the custom look you want.</h6>
+                    <p class="adress">360 King Street<br/>Feastrvale Trevose, PA 19057  </p>
+                    <p class="phone">(755) 564-84-12</p>
+                    <p class="email">youname@mail.com</p>
+                </div>
+            </section>
+            <section class="sec-8">
+                <div class="flexBox-2">
+                    <div class="flexBox-2-item">
+                        <a href="">Learn More</a>
+                        <a href="">How it works?</a>
+                        <a href="">Meeting tools</a>
+                        <a href="">Live streaming</a>
+                        <a href="">Contact method</a>
+                    </div>
+                    <div class="flexBox-2-item">
+                        <a href="">About Us</a>
+                        <a href="">About us</a>
+                        <a href="">Features</a>
+                        <a href="">Privacy police</a>
+                        <a href="">Terms & Conditions</a>
+                    </div>
+                    <div class="flexBox-2-item">
+                        <a href="">Support</a>
+                        <a href="">F.A.Q.</a>
+                        <a href="">Contact us</a>
+                        <a href="">Live chat</a>
+                        <a href="">Phone call</a>
+                    </div>
+                    <div class="flexBox-2-item">
+                        <p>Enjoy your Life</p>
+                        <p>Great web UI kit for designers, freelancers or business.</p>
+                        <div>
+                            <img src="img/img (18).png">
+                            <img src="img/img (19).png">
+                            <img src="img/img (20).png">
+                            <img src="img/img (21).png">
+                            <img src="img/img (22).png">
+                            <img src="img/img (23).png">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+	</body>
+</html>
